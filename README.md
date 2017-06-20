@@ -4,7 +4,7 @@ Snippet that lets Pythons `configparser` auto-guess types in a specified order.
 
 ## Usage:
 
-```
+```python
 from acp import AutoConfigParser
 
 conf = AutoConfigParser()
@@ -29,7 +29,7 @@ thirdoption: 18 (<class 'int'>)
 The default guess order is `int`, `float`, `boolean`, `str`, you can change it
 by setting `conf.try_order`
 
-```
+```python
 conf.try_order = (str,)
 for option in conf.options('mysection'):
     parsed_val = conf.get('mysection', option)
